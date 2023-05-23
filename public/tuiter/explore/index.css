@@ -1,0 +1,81 @@
+.wd-search {
+  color: gray;
+  background-color: lightgray;
+  border-radius: 50px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  width: 80%;
+}
+
+.wd-search-logo {
+  margin-left: 10px;
+}
+
+.wd-gear-logo {
+  margin: 10px;
+  padding: 10px;
+  float: right;
+}
+
+.wd-tabs {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.wd-tab {
+  display: block;
+  float: left;
+  text-align: center;
+  padding: 20px;
+}
+
+.wd-selected-tab {
+  border-bottom: solid deepskyblue;
+  font-weight: bold;
+}
+
+.wd-main {
+  position: relative;
+}
+
+.wd-main-image {
+  width: 100%;
+}
+
+.wd-main-title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+}
+
+.wd-tuit-list {
+  width: 100%;
+  list-style-type: none;
+}
+
+.wd-tuit {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.wd-tuit-trending {
+  font-size: 0.8em;
+  color: grey;
+}
+
+.wd-tuit-tweets {
+  font-size: 0.8em;
+  color: gray;
+}
+
+.wd-tuit-topic {
+  font-weight: bold;
+}
