@@ -1,16 +1,21 @@
 import React from "react";
-const TuitSummaryItem = ({
-  tuit = {
-    topic: "Space",
-    userName: "SpaceX",
-    time: "2h",
-    title: `Tesla CyberTruck lands on Mars and
-               picks up the Curiosity rover on its 6' bed`,
-    image: "tesla.png"
-  }
+import TuitStats from "./tuit-stats";
+import {useDispatch} from "react-redux";
+import {deleteTuit} from "../reducers/tuits-reducer";
+import {BsXLg} from "react-icons/bs";
+
+const TuitItem = ({
+  tuit
 }) => {
+  const dispatch = useDispatch();
+const deleteTuitHandler = (id) => {
+  dispatch(deleteTuit(id));
+}
+
   return (
     <li className="list-group-item">
+     <BsXLg className="float-end"
+            onClick={() => deleteTuitHandler(tuit._id)} />
       <div className="row">
         <div className="col-10">
           <div>
@@ -27,7 +32,8 @@ const TuitSummaryItem = ({
           />
         </div>
       </div>
+      <TuitStats tuit={tuit}/>
     </li>
   );
 };
-export default TuitSummaryItem;
+export default TuitItem;
