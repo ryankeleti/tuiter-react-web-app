@@ -1,17 +1,16 @@
 import React from "react";
 import TuitStats from "./tuit-stats";
+import {deleteTuitThunk} from "../services/tuits-thunks";
 import {useDispatch} from "react-redux";
-import {deleteTuit} from "../reducers/tuits-reducer";
 import {BsXLg} from "react-icons/bs";
 
 const TuitItem = ({
   tuit
 }) => {
   const dispatch = useDispatch();
-const deleteTuitHandler = (id) => {
-  dispatch(deleteTuit(id));
-}
-
+  const deleteTuitHandler = (id) => {
+    dispatch(deleteTuitThunk(id));
+  };
   return (
     <li className="list-group-item">
      <BsXLg className="float-end"
