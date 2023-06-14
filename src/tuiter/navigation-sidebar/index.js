@@ -1,9 +1,9 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
-const { currentUser } = useSelector((state) => state.user);
 
 const NavigationSidebar = () => {
+  const { currentUser } = useSelector((state) => state.user);
   const { pathname } = useLocation();
   const [ignore, tuiter, active] = pathname.split("/");
   const links = [
